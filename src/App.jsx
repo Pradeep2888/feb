@@ -13,7 +13,7 @@ function App() {
     e.preventDefault()
     let formData = new FormData()
     formData.append('file', file.data)
-    const response = await fetch('http://localhost:8080/upload', {
+    const response = await fetch('https://feb-test-api.onrender.com/upload', {
       method: 'POST',
       body: formData,
     })
@@ -31,7 +31,7 @@ function App() {
 
 
   const getData=()=>{
-    axios.get("http://localhost:8080/")
+    axios.get("https://feb-test-api.onrender.com")
     .then((res)=>{
       setData(res.data.data)
     })
